@@ -10,7 +10,7 @@ function counts() {
    let seconds = Math.floor(gap / 1000) % 60
 
    if (gap < 0) {
-      
+
    }
 
    document.getElementById('d').innerText = days
@@ -21,6 +21,13 @@ function counts() {
    if (seconds < 10) {
       document.getElementById('s').innerText = '0' + seconds
    }
+   if (hours < 10) {
+      document.getElementById('h').innerText = '0' + hours
+   }
+   if (minutes < 10) {
+      document.getElementById('m').innerText = '0' + minutes
+   }
+
 }
 
 setInterval(counts, 1000)
