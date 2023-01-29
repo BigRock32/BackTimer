@@ -104,11 +104,39 @@ body {
   line-height: 0.85em;
 }
 
+.text-box {
+  display: flex;
+  width: 100%;
+  max-width: 55vw;
+}
+.text-box_2 {
+  justify-content: end;
+}
+
+.dop-text {
+  font-size: 1.5vw;
+  transform: rotate(25deg);
+}
+.dop-text_2 {
+  transform: rotate(-20deg);
+}
+
 @media screen and (max-width: 450px) {
+  .wrapper {
+    gap: 23px;
+  }
   .title {
-    font-size: 8vw;
+    font-size: 10vw;
   }
   .counter {
     font-size: 18.5vw;
+    margin-bottom: 60px;
+  }
+  .dop-text {
+    font-size: 6vw;
+  }
+  .text-box {
+    width: 100%;
+    max-width: 80vw;
   }
 }
