@@ -31,7 +31,7 @@ body {
 }
 
 .text-box {
-   display: flex;
+   display: none;
    width: 100%;
    max-width: 55vw;
 
@@ -75,5 +75,9 @@ body {
    .text-box {
       width: 100%;
       max-width: 80vw;
+   }
+
+   .streight-text{
+      font-size: 6vw;
    }
 }
