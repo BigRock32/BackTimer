@@ -41,12 +41,17 @@ body {
 }
 
 .dop-text {
+   display: none;
    font-size: 1.5vw;
    transform: rotate(25deg);
 
    &_2 {
       transform: rotate(-20deg);
    }
+}
+
+.streight-text{
+   font-size: 2vw;
 }
 
 @media screen and (max-width: 450px) {
