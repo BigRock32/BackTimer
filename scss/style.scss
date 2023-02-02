@@ -50,12 +50,119 @@ body {
    }
 }
 
-.streight-text{
+.streight-text {
+
    font-size: 2vw;
 }
 
+.form {
+   position: relative;
+   width: 100%;
+   max-width: 50vw;
+   margin: 0px auto;
+
+   &__title{
+      margin-bottom: 10px;
+      font-size: 0.8vw;
+      color: rgba(255, 255, 255, 0.5);
+   }
+
+   &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background: #1a1a1af2 url("/assets/prelauder.gif") center / 100px no-repeat;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s ease;
+   }
+
+   &._sending::after {
+      opacity: 1;
+      visibility: visible;
+   }
+
+   &__item {
+      display: flex;
+      position: relative;
+      width: 100%;
+   }
+
+   &__input-wrap {
+      width: 100%;
+      margin-right: 10px;
+   }
+
+   &__lable {
+      position: absolute;
+      top: 17px;
+      left: 15px;
+      z-index: 1;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      border-radius: 2px;
+      color: rgb(255, 255, 255, 0.9);
+   }
+
+   &__input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: rgb(255, 255, 255, 0.9);
+      transition: all 0.3s ease;
+
+      &:focus {
+         border-color: rgba(255, 255, 255, 0.8);
+         background-color: rgba(255, 255, 255, 0);
+
+         & ~ .form__lable {
+            top: -5px;
+            font-size: 12px;
+            background-color: rgb(19, 19, 19);
+            padding: 0 5px;
+            color: rgb(255, 255, 255, 0.8);
+         }
+      }
+
+      &:not(:placeholder-shown) ~ .form__lable {
+         top: -5px;
+         font-size: 12px;
+         background-color: rgb(19, 19, 19);
+         padding: 0 5px;
+         color: var(--yellow);
+      }
+
+      &:not(:placeholder-shown) {
+         background-color: rgba(255, 255, 255, 0);
+      }
+
+      &._error {
+         border-color: red;
+      }
+   }
+
+   &__error-text {
+      color: red;
+      display: none;
+      margin-top: 5px;
+   }
+
+   &__button {
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: rgb(255, 255, 255, 0.9);
+      background-color: rgba(220, 220, 220, 0.2);
+   }
+}
+
 @media screen and (max-width: 450px) {
-   .wrapper{
+   .wrapper {
       gap: 23px;
    }
 
@@ -77,7 +184,39 @@ body {
       max-width: 80vw;
    }
 
-   .streight-text{
+   .streight-text {
+      margin-top: 40px;
       font-size: 6vw;
+   }
+
+   .form {
+      position: relative;
+      width: 100%;
+      max-width: 95vw;
+      margin: 0px auto;
+
+      &__title{
+         margin-bottom: 10px;
+         font-size: 2.7vw;
+      }
+
+      &__input-wrap {
+         margin-right: 0px;
+      }
+
+      &__item {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 10px;
+      }
+
+      &__lable{
+         font-size: 3.5vw;
+      }
+
+      &__button {
+         padding: 10px 20px;
+         width: 100%;
+      }
    }
 }
