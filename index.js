@@ -52,20 +52,20 @@ document.addEventListener('DOMContentLoaded', function () {
       if (error === 0) {
          errorText.style.display = 'none'
          form.classList.add('_sending')
-         // let response = await fetch('sendmail.php', {
-         //    method: 'POST',
-         //    body: formData
-         // })
-         // if (response.ok) {
-         //    let result = await response.json()
-         //    alert(result.message)
-         //    formPreview.innerHtml = ''
-         //    form.reset()
-         //    form.classList.remove('_sending')
-         // } else {
-         //    alert('Ошибка')
-         //    form.classList.remove('_sending')
-         // }
+         let response = await fetch('sendmail.php', {
+            method: 'POST',
+            body: formData
+         })
+         if (response.ok) {
+            let result = await response.json()
+            alert(result.message)
+            formPreview.innerHtml = ''
+            form.reset()
+            form.classList.remove('_sending')
+         } else {
+            alert('Ошибка')
+            form.classList.remove('_sending')
+         }
       } else {
          errorText.style.display = 'block'
       }
