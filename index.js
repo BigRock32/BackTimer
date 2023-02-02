@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
    form.addEventListener('submit', formSend)
 
    async function formSend(e) {
-      //e.preventDefault()
+      e.preventDefault()
 
       let error = formValidate(form)
       let errorText = document.querySelector('.form__error-text')
