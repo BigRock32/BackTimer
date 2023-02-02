@@ -139,7 +139,7 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 .form::after {
-  content: "отправлено";
+  content: "улетело";
   position: absolute;
   display: flex;
   justify-content: center;
