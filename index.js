@@ -105,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener("DOMContentLoaded", function () {
    new TypeIt("#element", {
-      strings: ["Нужно будет тебя отучать ходить в универ по субботам"],
-      
+      strings: ["И все же, какие-то субботы возможно будут пропущены🙂"],
    }).go();
 });

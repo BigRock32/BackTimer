@@ -58,6 +58,10 @@ body {
 
 .streight-text {
    font-size: 2vw;
+
+   & span{
+      color: rgb(255, 198, 40);
+   }
 }
 
 .form {

@@ -132,6 +132,9 @@ body {
 .streight-text {
   font-size: 2vw;
 }
+.streight-text span {
+  color: rgb(255, 198, 40);
+}
 
 .form {
   position: relative;
