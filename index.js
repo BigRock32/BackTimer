@@ -10,15 +10,12 @@ function counts() {
    let minutes = Math.floor(gap / 1000 / 60) % 60
    let seconds = Math.floor(gap / 1000) % 60
 
-   const counterEnd = document.querySelector('.counterEnd')
+   // const counterEnd = document.querySelector('.counterEnd')
    const counter = document.querySelector('.counter')
 
-   
-   
-   
    const title = document.querySelector('.title')
    title.innerText = 'Я вернусь через'
-   
+
 
    if (gap < 0) {
       // counterEnd.style.display = 'block'
@@ -121,3 +118,15 @@ document.addEventListener("DOMContentLoaded", function () {
       strings: ["Совсем скоро прилечу, будем вместе везде гулять"],
    }).go();
 });
+
+
+//lottie visible
+const anim = lottie
+
+anim.loadAnimation({
+   container: document.querySelector('#lottie'),
+   rerender: 'svg',
+   loop: true,
+   autoplay: true,
+   path: './hearts.json'
+})
