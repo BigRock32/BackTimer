@@ -107,6 +107,11 @@ body {
   line-height: 0.85em;
 }
 
+.counterEnd {
+  font-size: 4vw;
+  display: none;
+}
+
 .text-box {
   display: block;
   position: absolute;

@@ -1,4 +1,5 @@
 let date = new Date('February 14 2023 12:40:00')
+// let date = new Date('February 8 2023 15:39:30')
 
 function counts() {
    let now = new Date()
@@ -9,8 +10,20 @@ function counts() {
    let minutes = Math.floor(gap / 1000 / 60) % 60
    let seconds = Math.floor(gap / 1000) % 60
 
-   if (gap < 0) {
+   const counterEnd = document.querySelector('.counterEnd')
+   const counter = document.querySelector('.counter')
 
+   
+   
+   
+   const title = document.querySelector('.title')
+   title.innerText = 'Я вернусь через'
+   
+
+   if (gap < 0) {
+      // counterEnd.style.display = 'block'
+      counter.style.display = 'none'
+      title.innerText = 'Должен был прилететь'
    }
 
    document.getElementById('d').innerText = days
@@ -105,6 +118,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener("DOMContentLoaded", function () {
    new TypeIt("#element", {
-      strings: ["И все же, какие-то субботы возможно будут пропущены🙂"],
+      strings: ["Совсем скоро прилечу, будем вместе везде гулять"],
    }).go();
 });
