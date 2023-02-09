@@ -115,13 +115,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener("DOMContentLoaded", function () {
    new TypeIt("#element", {
-      strings: ["Совсем скоро прилечу, будем вместе везде гулять"],
+      strings: ["Надеюсь, что не замерзнем. Постараемся хотя бы"],
    }).go();
 });
 
 
 //lottie visible
+// const title = document.querySelector('.title')
 const anim = lottie
+
+// title.addEventListener('click', onClick)
+
+// function onClick() {
+//    anim.loadAnimation({
+//       container: document.querySelector('#lottie'),
+//       rerender: 'svg',
+//       loop: false,
+//       autoplay: true,
+//       path: './hearts.json'
+//    })
+// }
 
 anim.loadAnimation({
    container: document.querySelector('#lottie'),
