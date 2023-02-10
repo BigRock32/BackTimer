@@ -101,6 +101,16 @@ body {
   z-index: -1;
 }
 
+.lottie-hidden {
+  position: absolute;
+  right: auto;
+  bottom: auto;
+  pointer-events: none;
+  max-width: 20vw;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
 .title {
   font-size: 5vw;
 }
@@ -145,6 +155,14 @@ body {
   font-size: 2vw;
 }
 .streight-text span {
+  color: rgb(255, 198, 40);
+}
+
+.click-text {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.click-text:hover {
   color: rgb(255, 198, 40);
 }
 
@@ -226,13 +244,6 @@ body {
   padding: 0 5px;
   color: var(--yellow);
 }
-.form__input:not(:-ms-input-placeholder) ~ .form__lable {
-  top: -5px;
-  font-size: 12px;
-  background-color: rgb(19, 19, 19);
-  padding: 0 5px;
-  color: var(--yellow);
-}
 .form__input:not(:placeholder-shown) ~ .form__lable {
   top: -5px;
   font-size: 12px;
@@ -241,9 +252,6 @@ body {
   color: var(--yellow);
 }
 .form__input:not(:-moz-placeholder-shown) {
-  background-color: rgba(255, 255, 255, 0);
-}
-.form__input:not(:-ms-input-placeholder) {
   background-color: rgba(255, 255, 255, 0);
 }
 .form__input:not(:placeholder-shown) {
@@ -274,6 +282,9 @@ body {
   .counter {
     font-size: 18.5vw;
     margin-bottom: 30px;
+  }
+  .lottie-hidden {
+    max-width: 60vw;
   }
   .dop-text {
     font-size: 4.5vw;

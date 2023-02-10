@@ -18,11 +18,21 @@ body {
    font-family: "Poppins", sans-serif;
 }
 
-.lottie-visible{
+.lottie-visible {
    position: absolute;
    right: 0;
    bottom: 0;
    z-index: -1;
+}
+
+.lottie-hidden {
+   position: absolute;
+   right: auto;
+   bottom: auto;
+   pointer-events: none;
+   max-width: 20vw;
+   transition: all 0.3s ease;
+   z-index: 10;
 }
 
 .title {
@@ -39,7 +49,7 @@ body {
    }
 }
 
-.counterEnd{
+.counterEnd {
    font-size: 4vw;
    display: none;
 }
@@ -71,7 +81,16 @@ body {
 .streight-text {
    font-size: 2vw;
 
-   & span{
+   & span {
+      color: rgb(255, 198, 40);
+   }
+}
+
+.click-text {
+   transition: color 0.3s ease;
+   cursor: pointer;
+
+   &:hover {
       color: rgb(255, 198, 40);
    }
 }
@@ -198,6 +217,10 @@ body {
    .counter {
       font-size: 18.5vw;
       margin-bottom: 30px;
+   }
+
+   .lottie-hidden {
+      max-width: 60vw;
    }
 
    .dop-text {

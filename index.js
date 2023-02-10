@@ -121,20 +121,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //lottie visible
-// const title = document.querySelector('.title')
+const clickText = document.querySelector('.click-text')
 const anim = lottie
 
-// title.addEventListener('click', onClick)
+clickText.addEventListener('click', onClick)
 
-// function onClick() {
-//    anim.loadAnimation({
-//       container: document.querySelector('#lottie'),
-//       rerender: 'svg',
-//       loop: false,
-//       autoplay: true,
-//       path: './hearts.json'
-//    })
-// }
+function onClick() {
+   showLottie()
+   anim.loadAnimation({
+      container: document.querySelector('#lottie-2'),
+      rerender: 'svg',
+      loop: false,
+      autoplay: true,
+      path: './heart-kiss.json'
+   })
+
+   removeLottieMoment()
+   setTimeout(removeLottie, 2700)
+}
+
+const lottieHidden = document.querySelector('.lottie-hidden')
+
+function showLottie() {
+   document.getElementById('lottie-2').style.opacity = 1
+}
+
+function removeLottie() {
+   document.getElementById('lottie-2').style.opacity = 0
+   let lottieHiddenNodeList = lottieHidden.childNodes
+   let lottieHiddenArr = Array.from(lottieHiddenNodeList)
+
+   //for (let i = 0; i < lottieHiddenArr.length; i++) {
+   if (lottieHiddenArr.length !== 0) {
+      console.log('ok')
+      lottieHiddenArr[0].remove()
+   }
+   //}
+   console.log(lottieHiddenArr);
+}
+
+function removeLottieMoment() {
+   // document.getElementById('lottie-2').style.opacity = 0
+   let lottieHiddenNodeList = lottieHidden.childNodes
+   let lottieHiddenArr = Array.from(lottieHiddenNodeList)
+
+   if (lottieHiddenArr.length >= 1) {
+      console.log('ok')
+      lottieHiddenArr[0].remove()
+   }
+}
+
+
+// console.log(lottieArray.childNodes.length);
 
 anim.loadAnimation({
    container: document.querySelector('#lottie'),
