@@ -128,16 +128,8 @@ clickText.addEventListener('click', onClick)
 
 function onClick() {
    showLottie()
-   anim.loadAnimation({
-      container: document.querySelector('#lottie-2'),
-      rerender: 'svg',
-      loop: false,
-      autoplay: true,
-      path: './heart-kiss.json'
-   })
-
+   loadAnimat()
    removeLottieMoment()
-   setTimeout(removeLottie, 2700)
 }
 
 const lottieHidden = document.querySelector('.lottie-hidden')
@@ -151,12 +143,10 @@ function removeLottie() {
    let lottieHiddenNodeList = lottieHidden.childNodes
    let lottieHiddenArr = Array.from(lottieHiddenNodeList)
 
-   //for (let i = 0; i < lottieHiddenArr.length; i++) {
    if (lottieHiddenArr.length !== 0) {
       console.log('ok')
       lottieHiddenArr[0].remove()
    }
-   //}
    console.log(lottieHiddenArr);
 }
 
@@ -169,6 +159,18 @@ function removeLottieMoment() {
       console.log('ok')
       lottieHiddenArr[0].remove()
    }
+}
+
+const loadAnimat = () => {
+   anim.loadAnimation({
+      container: document.querySelector('#lottie-2'),
+      rerender: 'svg',
+      loop: false,
+      autoplay: true,
+      path: './heart-kiss.json'
+   })
+
+   setTimeout(removeLottie, 2700)
 }
 
 
