@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener("DOMContentLoaded", function () {
    new TypeIt("#element", {
-      strings: ["Надеюсь, что не замерзнем. Постараемся хотя бы"],
+      strings: ["Если не приедешь, то никакого катка тогда. Да."],
    }).go();
 });
 
@@ -170,7 +170,8 @@ const loadAnimat = () => {
       path: './heart-kiss.json'
    })
 
-   setTimeout(removeLottie, 2700)
+   // setTimeout(removeLottie, 2700)
+   removeLottie()
 }
 
 
