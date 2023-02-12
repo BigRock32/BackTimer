@@ -170,8 +170,7 @@ const loadAnimat = () => {
       path: './heart-kiss.json'
    })
 
-   // setTimeout(removeLottie, 2700)
-   removeLottie()
+   setTimeout(removeLottie, 2700)
 }
 
 
