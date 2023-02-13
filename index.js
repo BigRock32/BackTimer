@@ -1,5 +1,5 @@
 let date = new Date('February 14 2023 12:40:00')
-//let date = new Date('February 8 2023 15:39:30')
+// let date = new Date('February 8 2023 15:39:30')
 
 function counts() {
    let now = new Date()
@@ -115,11 +115,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-   new TypeIt("#element", {
-      strings: ["Если не приедешь, то никакого катка тогда. Да."],
-   }).go();
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//    new TypeIt("#element", {
+//       strings: [""],
+//    }).go();
+// });
 
 
 //lottie visible
