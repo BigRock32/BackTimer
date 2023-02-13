@@ -35,8 +35,23 @@ body {
    z-index: 10;
 }
 
+.empty{
+   display: none;
+   justify-content: center;
+   height: 100px;
+   width: 100%;
+   position: relative;
+}
+
+.counterEnd{
+   position: absolute;
+   top: -200%;
+}
+
+
 .title {
    font-size: 5vw;
+   text-align: center;
 }
 
 .counter {
@@ -217,6 +232,11 @@ body {
    .counter {
       font-size: 18.5vw;
       margin-bottom: 30px;
+   }
+
+   .counterEnd{
+      position: absolute;
+      top: -150%;
    }
 
    .lottie-hidden {

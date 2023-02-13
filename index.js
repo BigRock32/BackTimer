@@ -1,5 +1,5 @@
 let date = new Date('February 14 2023 12:40:00')
-// let date = new Date('February 8 2023 15:39:30')
+//let date = new Date('February 8 2023 15:39:30')
 
 function counts() {
    let now = new Date()
@@ -10,7 +10,8 @@ function counts() {
    let minutes = Math.floor(gap / 1000 / 60) % 60
    let seconds = Math.floor(gap / 1000) % 60
 
-   // const counterEnd = document.querySelector('.counterEnd')
+   const counterEnd = document.querySelector('.counterEnd')
+   const empty = document.querySelector('.empty')
    const counter = document.querySelector('.counter')
 
    const title = document.querySelector('.title')
@@ -18,7 +19,8 @@ function counts() {
 
 
    if (gap < 0) {
-      // counterEnd.style.display = 'block'
+      counterEnd.style.display = 'block'
+      empty.style.display = 'flex'
       counter.style.display = 'none'
       title.innerText = 'Должен был прилететь'
    }
@@ -182,4 +184,15 @@ anim.loadAnimation({
    loop: true,
    autoplay: true,
    path: './hearts.json'
+})
+
+
+// lottie-end
+
+anim.loadAnimation({
+   container: document.querySelector('#lottie-3'),
+   rerender: 'svg',
+   loop: true,
+   autoplay: true,
+   path: './heart-end.json'
 })
